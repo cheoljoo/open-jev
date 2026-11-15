@@ -1,5 +1,5 @@
 .venv/
-openjev/
+/openjev/
 __pycache__/
 *.log
 keys.env
