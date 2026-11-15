@@ -41,3 +41,7 @@ curl -X POST http://localhost:8100/v1/systemone -H 'Content-Type: application/js
 
 **By default both servers listen on 0.0.0.0 with no authentication** (anyone who can reach the host can use the GPU).
 Run with `USE_KEYS=1` and a `keys.env` file to require `Authorization: Bearer <key>`, see [docs/DEPLOY.md](docs/DEPLOY.md).
+
+## License
+
+[MIT](LICENSE) for the code in this repository. The models are separate works under their own licenses (openjev: MIT, laya: Apache-2.0).
