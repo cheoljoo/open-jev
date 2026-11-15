@@ -18,7 +18,15 @@ MODEL_DIR = os.environ.get("OPENJEV_MODEL", str(ROOT / "openjev" / "qwen3.5-4b-n
 API_KEY = os.environ.get("OPENJEV_API_KEY")  # optional; if set, require "Authorization: Bearer <key>"
 MODEL_NAME = "openjev/qwen3.5-4b-nli-v5"
 
-app = FastAPI(title="OpenJev API", version="1.0")
+app = FastAPI(
+    title="OpenJev API", version="1.0",
+    description=(
+        "Typed decisions (choice / score / noul) and entailment scoring with "
+        "[openjev](https://huggingface.co/AlexWortega/openjev) `qwen3.5-4b-nli-v5`.\n\n"
+        "- Source / docs: https://github.com/cheoljoo/open-jev\n"
+        "- Model: https://huggingface.co/AlexWortega/openjev\n"
+        "- Sibling API (laya, port 8200): same `/v1/systemone` format"),
+)
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 _lock = threading.Lock()  # one GPU forward at a time

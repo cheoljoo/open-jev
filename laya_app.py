@@ -37,7 +37,11 @@ def custom_openapi():
     if app.openapi_schema:
         return app.openapi_schema
     schema = get_openapi(title="Laya API", version="1.0",
-                         description="Multilingual typed-decision engine (laya). Same wire format as /v1/systemone of Jev.",
+                         description=("Multilingual typed-decision engine ([laya](https://github.com/NandhaKishorM/laya)). "
+                                      "Same wire format as /v1/systemone of Jev.\n\n"
+                                      "- Source / docs: https://github.com/cheoljoo/open-jev\n"
+                                      "- Model: https://github.com/NandhaKishorM/laya\n"
+                                      "- Sibling API (openjev, port 8100): same `/v1/systemone` format"),
                          routes=app.routes)
     for path, (summary, desc, example) in DOCS.items():
         op = schema["paths"][path]["post"]
