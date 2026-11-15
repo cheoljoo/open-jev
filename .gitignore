@@ -1,0 +1,6 @@
+.venv/
+openjev/
+__pycache__/
+*.log
+keys.env
+*.env

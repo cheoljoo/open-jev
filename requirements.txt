@@ -1,0 +1,5 @@
+laya[serve]
+fastapi
+uvicorn
+transformers
+huggingface_hub

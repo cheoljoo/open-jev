@@ -1,0 +1,13 @@
+[Unit]
+Description=@DESC@
+After=network-online.target
+
+[Service]
+WorkingDirectory=@DIR@
+ExecStart=@DIR@/@SCRIPT@
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=300
+
+[Install]
+WantedBy=default.target
