@@ -36,6 +36,7 @@ curl -X POST http://localhost:8100/v1/systemone -H 'Content-Type: application/js
 - [docs/API.md](docs/API.md) - endpoints, request/response formats, examples
 - [docs/DEPLOY.md](docs/DEPLOY.md) - network exposure, API keys, systemd, CORS, troubleshooting
 - [docs/MODELS.md](docs/MODELS.md) - openjev vs laya, caveats
+- [vendor/README.md](vendor/README.md) - upstream source files behind each REST API (reference copies, with licenses)
 
 ## Security
 
